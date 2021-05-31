@@ -29,6 +29,17 @@ let colorName: string = Color[2]; //Green
 type ObjA = { name: string }
 let objA: ObjA = { name: "Richard" };
 
+// 一般 function 加入 interface
+interface NumberFunction {
+  (x: number, y: number): number,
+}
+function add(x: number, y: number): number {
+  return x + y;
+}
+
+const func: NumberFunction = add;
+func(1, 2); // = 3
+
 // arrow function 箭頭函式
 type Animal = (animal: string) => void
 let animal: Animal = (animal) => { console.log(animal) }
